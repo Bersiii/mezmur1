@@ -378,7 +378,7 @@ i.up {
     0 0 10px #fce1dc,
     0 0 20px #e8a79f;
 }
-@media (max-width: 1025px) {
+@media (max-width: 980px) {
   .ba {
     flex-direction: column; /* Stacks the title and player vertically */
     align-items: stretch; /* Allows elements to take up full width if needed */
@@ -412,8 +412,5 @@ i.up {
     animation: none; /* optional */ /* 'scroll' or 'initial' prevents mobile browser lag/glitches */
     background-attachment: scroll;
 
-    /* Optional: If the desktop image is too large/heavy, 
-       you can swap it for a smaller, mobile-optimized version */
-    /* background-image: url(image-mobile.png); */
   }
 }
