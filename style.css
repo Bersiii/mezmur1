@@ -13,6 +13,16 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  animation: zoom 10s infinite alternate;
+  
+}
+@keyframes zoom {
+  from {
+    background-size: 120%;
+  }
+  to {
+    background-size: 140%;
+  }
 }
 
 .l-div {
@@ -368,7 +378,7 @@ i.up {
     0 0 10px #fce1dc,
     0 0 20px #e8a79f;
 }
-@media (max-width: 800px) {
+@media (max-width: 1025px) {
   .ba {
     flex-direction: column; /* Stacks the title and player vertically */
     align-items: stretch; /* Allows elements to take up full width if needed */
@@ -396,7 +406,10 @@ i.up {
     width: auto; /* Overrides the fixed desktop width */
   }
   body {
-    /* 'scroll' or 'initial' prevents mobile browser lag/glitches */
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll; /* better for mobile */
+    animation: none; /* optional */ /* 'scroll' or 'initial' prevents mobile browser lag/glitches */
     background-attachment: scroll;
 
     /* Optional: If the desktop image is too large/heavy, 
