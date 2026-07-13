@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mezmur</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+     <link rel="icon" href="icon1.svg">
+  </head>
+  <body>
+    <div class="l-div">
+      <div class="ba">
+        <div class="b-div">
+          <i class="fa-solid fa-cross shiny-icon"></i>
+          <p>Bersi's Mezmur player</p>
+        </div>
+        <div class="b-div aap">
+          <div class="player">
+            <button id="play">
+              <i id="btn-icon" class="fa-solid fa-music shiny-icon"></i>
+            </button>
+            <input type="range" id="progress" value="0" />
+          </div>
+
+          <audio id="audioPlayer"></audio>
+        </div>
+      </div>
+
+      <div class="d-div">
+        <div class="mmm">
+          <div class="ddd">
+            <div class="dropdown">
+              <div class="l-btn">
+                <button class="btn btn1">
+                  <span>21 media</span>
+                  <i class="fa-solid fa-chevron-down down"></i>
+                  <i class="fa-solid fa-chevron-up up"></i>
+                </button>
+              </div>
+
+              <div class="m-btn">
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ደስተኛ ነኝ እኔ...
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ልቤ ያዉቀዋል
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  የሚያበረታታዉን
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ታውቂዋለሽና
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ስቡህ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  የኔ መሀሪ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ሚካኤል
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  የጌታየ እናት
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  አምላከ እስራኤል
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  የሲሎንዲስ ጥበብ
+                </button>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <div class="l-btn">
+                <button class="btn btn1">
+                  <span>ዲያቆን አቤል መክብብ</span>
+                  <i class="fa-solid fa-chevron-down down"></i>
+                  <i class="fa-solid fa-chevron-up up"></i>
+                </button>
+              </div>
+              <div class="m-btn">
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ማር ሚካኤል
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  በማይነገር ስጦታ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  እንዳላጠፋ ሰዉ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ወረት የሌለዉ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ይተካል
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ኪዳንሽ ነዉ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  መድኃኔዓለም
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ማርያም ማርያም
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ምልክቴ ነሽ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  እኛ ግን ስላንች
+                </button>
+              </div>
+            </div>
+            <div class="dropdown">
+              <div class="l-btn">
+                <button class="btn btn1">
+                  <span>ሊቀ መዘምራን ይልማ ኃይሉ</span>
+                  <i class="fa-solid fa-chevron-down down"></i>
+                  <i class="fa-solid fa-chevron-up up"></i>
+                </button>
+              </div>
+              <div class="m-btn">
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ምስጋና
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ምን ሰማህ ዮሀንስ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  በርጠሚወስ ነኝ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  በብርሀን ፀዳል
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  አረሳት ኢትዮጵያን
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ኃይልህ ሲገለጥ በሰማይ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  የሚጠብቀኝ አይተኛም
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ፈያታዊ ዘየማን
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ሁነኛ ጓደኛ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  የካህናት አለቃ
+                </button>
+              </div>
+            </div>
+            <div class="dropdown">
+              <div class="l-btn">
+                <button class="btn btn1">
+                  <span>ዘማሪ ሲስተር ህይወት</span>
+                  <i class="fa-solid fa-chevron-down down"></i>
+                  <i class="fa-solid fa-chevron-up up"></i>
+                </button>
+              </div>
+              <div class="m-btn">
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  መርቆሬዎስ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  በአንቺ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  በዉስጥ ሰዉነቴ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ብጨነቅ ብጠበብ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ናና አማኑኤል
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ሠራዊተ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ከፊቴ ያለዉን
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ዝም ብየ ልይሽ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  የለም የሚሳነዉ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ጌታን ተቀበሉ
+                </button>
+              </div>
+            </div>
+            <div class="dropdown">
+              <div class="l-btn">
+                <button class="btn btn1">
+                  <span>ዘማሪ ገብረዮሐንስ</span>
+                  <i class="fa-solid fa-chevron-down down"></i>
+                  <i class="fa-solid fa-chevron-up up"></i>
+                </button>
+              </div>
+              <div class="m-btn">
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ምስጋና በመቅደስህ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ስለወደደኝ አዳነኝ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                 በዋጋ ገዝተኀኛልና
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  አንቺ የወርቅ መቅጃ...
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  የታመነ ሊቀ ካህናት
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ኢየሱስ ልበል ኢየሱስ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                 እዉነት ነዉ አወ...
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                 የመንገዴ መሪ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  የማይሸረሸር አለቴ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ያለፈዉ ዘመኔ ይብቃ
+                </button>
+              </div>
+            </div>
+            <div class="dropdown">
+              <div class="l-btn">
+                <button class="btn btn1">
+                  <span>የገብርኤል መዝሙር</span>
+                  <i class="fa-solid fa-chevron-down down"></i>
+                  <i class="fa-solid fa-chevron-up up"></i>
+                </button>
+              </div>
+              <div class="m-btn">
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ኃያል ነህ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  የሚካኤል መዝሙር..
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                 አረጋጊዉ መልአክ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  አብሰራ ገብርኤል
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  አንተ የልቤ ወዳጅ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ኦ ገብርኤል
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ገብርኤል መላእከ..
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  መላእከ ራማ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  ገብርኤል በሰማይ
+                </button>
+                <button class="btn media">
+                  <i class="fa-solid fa-music"></i>
+                  የመላዕክት አለቃ
+                </button>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

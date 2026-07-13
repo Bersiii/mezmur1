@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d0d0f;
+  background: url(image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.l-div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+.dropdown {
+  position: relative;
+}
+
+.b-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  width: 30%;
+  margin: 10px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: rgba(26, 21, 23, 0.6); /* Translucent dark charcoal */
+  color: #f7d5d0; /* Muted light rose-gold text */
+  border: 2px solid #e8a79f; /* Brightened border base color */
+  box-shadow:
+    0 0 40px rgba(232, 167, 159, 0.7),
+    inset 0 0 15px rgba(232, 167, 159, 0.2);
+}
+.shiny-icon {
+  margin-right: 8px; /* Space between sparkle and text */
+  text-shadow:
+    0 0 10px #e8a79f,
+    0 0 20px #e8a79f;
+  animation: pulseShine 2s infinite ease-in-out;
+}
+@keyframes pulseShine {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+    filter: drop-shadow(0 0 2px #e8a79f);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    filter: drop-shadow(0 0 8px #fce1dc);
+  }
+}
+.d-div {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.b-div p {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 600; /* Makes it a little bold and highly readable */
+  font-style: normal;
+  margin: 0;
+
+  /* Adds a soft, elegant metallic shine effect to the text */
+  text-shadow:
+    0 0 8px rgba(247, 213, 208, 0.6),
+    0 0 15px rgba(232, 167, 159, 0.3);
+}
+.b-div audio {
+  width: 100%;
+  border-radius: 20px;
+}
+.aap {
+  width: 400px;
+  background: linear-gradient(to right, rgb(20, 20, 20), rgb(50, 50, 50));
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+#songTitle {
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/* 1. The Track Line - Now solid dark black */
+#progress {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #000000; /* Solid dark black line */
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* 2. The Sliding Interactive Thumb (Chrome, Safari, Edge, Opera) */
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #e8a79f;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  /* Toned down, softer glow effect */
+  box-shadow:
+    0 0 5px rgba(232, 167, 159, 0.7),
+    0 0 10px rgba(232, 167, 159, 0.4);
+}
+
+/* 3. The Sliding Interactive Thumb (Firefox) */
+#progress::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 50%;
+  background: #e8a79f;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  /* Toned down, softer glow effect */
+  box-shadow:
+    0 0 5px rgba(232, 167, 159, 0.7),
+    0 0 10px rgba(232, 167, 159, 0.4);
+}
+
+/* 4. Responsive hover touch */
+#progress::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+#progress::-moz-range-thumb:hover {
+  transform: scale(1.15);
+}
+
+.player button {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+}
+.media.active-track {
+  border-radius: 20px;
+  background-color: rgba(
+    15,
+    11,
+    13,
+    0.85
+  ); /* Deeper, richer translucent charcoal contrast */
+  /* Muted light rose-gold text */
+  border: 4px solid #e8a79f; /* Thicker, prominent brightened border */
+
+  /* Elegant static full glow projection */
+  box-shadow:
+    0 0 40px rgba(232, 167, 159, 0.7),
+    inset 0 0 15px rgba(232, 167, 159, 0.2);
+
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 600; /* Matching the weight of your header player title */
+  color: #f7d5d0; /* Muted light rose-gold text */
+  letter-spacing: 0.8px; /* Elegant spacing between letters */
+
+  /* Smooth transitions for interactive hover effects */
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+
+  /* Soft, divine text glow matching the overall space theme */
+  text-shadow:
+    0 0 8px rgba(247, 213, 208, 0.5),
+    0 0 15px rgba(232, 167, 159, 0.2);
+}
+
+.player input[type="range"] {
+  cursor: pointer;
+}
+
+#progress {
+  flex: 1;
+}
+
+.mmm {
+  background-color: #171315; /* Pure dark charcoal/rose undertone */
+  border: 2px solid #e8a79f; /* Brightened border base color */
+  box-shadow:
+    0 0 40px rgba(232, 167, 159, 0.7),
+    inset 0 0 15px rgba(232, 167, 159, 0.2);
+  min-height: 100%;
+  border-radius: 16px;
+  height: auto;
+  padding-bottom: 50px;
+  width: 390px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ddd {
+  /* height: 100%;
+  width: 300px;
+  margin-top: 50px;
+  position: relative; */
+  width: 320px; /* Sets a solid, unified width for everything inside */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 50px;
+}
+
+.btn {
+  width: 20%;
+  height: 30px;
+}
+.btn1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 200px;
+  padding: 10px 15px;
+}
+
+i.up {
+  display: none;
+}
+.m-btn.show {
+  display: grid;
+  background-color: #141012;
+  border: 1px solid #2d2326;
+  grid-template-rows: repeat(5, 30px);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  width: 100%;
+  grid-template-columns: 1fr 1fr; /* Uses fraction units to balance the two columns evenly */
+  gap: 10px;
+  padding: 15px;
+}
+.m-btn .btn {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1517; /* Solid charcoal pill look */
+  border: 1px solid #281f22;
+  border-radius: 6px;
+  color: #dcb3aa;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 12px;
+}
+.m-btn .btn i {
+  color: #ffb6c1; /* Rose Gold */
+  font-size: 13px;
+  color: #ffb6c1;
+  opacity: 0.7;
+}
+.m-btn .btn:hover {
+  background-color: #261e21;
+  color: #ffffff;
+}
+.ba {
+  display: flex;
+  gap: 500px;
+}
+.m-btn {
+  display: none;
+  background: white;
+}
+.media {
+  /* ... your existing code ... */
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 13px;
+  color: #f7d5d0;
+
+  /* Forces the first letter of each word to automatically capitalize beautifully */
+  text-transform: capitalize;
+}
+
+.l-btn .btn {
+  width: 100%;
+  width: 90%;
+  border-radius: 8px;
+  background-color: #1a1517;
+  border: 1px solid #2d2326;
+  color: #e5bdaf; /* Warm beige/rose tinted font color */
+}
+
+.dropdown:has(.m-btn.show) .l-btn .btn {
+  background: linear-gradient(
+    180deg,
+    #e8a79f 0%,
+    #ca8077 100%
+  ); /* Solid satin rose gold */
+  border: 1px solid #f2c2bc;
+  color: #171315; /* Switches text to dark for clean readability */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.dropdown {
+  width: 100%;
+}
+.down.dd {
+  display: none;
+}
+.up.uu {
+  display: block;
+}
+
+.btn1 span {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 600; /* Matching the weight of your header player title */
+  color: #f7d5d0; /* Muted light rose-gold text */
+  letter-spacing: 0.8px; /* Elegant spacing between letters */
+
+  /* Smooth transitions for interactive hover effects */
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+
+  /* Soft, divine text glow matching the overall space theme */
+  text-shadow:
+    0 0 8px rgba(247, 213, 208, 0.5),
+    0 0 15px rgba(232, 167, 159, 0.2);
+}
+.btn1:hover span {
+  color: #ffffff; /* Shifts to clean white on hover */
+  text-shadow:
+    0 0 10px #fce1dc,
+    0 0 20px #e8a79f;
+}
+@media (max-width: 800px) {
+  .ba {
+    flex-direction: column; /* Stacks the title and player vertically */
+    align-items: stretch; /* Allows elements to take up full width if needed */
+    padding: 20px 15px;
+    margin: 10px; /* Adds some breathing room on the screen edges */
+    gap: 15px;
+  }
+
+  .b-div {
+    justify-content: center;
+    width: 100%; /* Centers the title/icon group on mobile */
+  }
+
+  .b-div.aap {
+    width: 100%; /* Ensures the player section takes up full width */
+  }
+
+  .player {
+    width: 100%;
+    justify-content: space-between; /* Spaces play button and progress bar nicely on mobile */
+  }
+
+  #progress {
+    flex-grow: 1; /* Allows progress bar to stretch and fill the mobile screen */
+    width: auto; /* Overrides the fixed desktop width */
+  }
+  body {
+    /* 'scroll' or 'initial' prevents mobile browser lag/glitches */
+    background-attachment: scroll;
+
+    /* Optional: If the desktop image is too large/heavy, 
+       you can swap it for a smaller, mobile-optimized version */
+    /* background-image: url(image-mobile.png); */
+  }
+}
