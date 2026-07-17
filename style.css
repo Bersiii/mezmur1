@@ -393,7 +393,7 @@ i.up {
 
   .b-div.aap {
    margin: 0 auto;
-    flex-grow: 1;
+   flex-grow: 1;
   }
   .bersi {
     width: auto;
@@ -413,7 +413,6 @@ i.up {
     background-attachment: scroll; 
     background: url(image.png);
     background-repeat: repeat;
-    background-attachment: fixed;
     animation: zoom 10s infinite alternate;
 
   }
@@ -424,7 +423,34 @@ i.up {
 
  @media (max-width: 560px) {
     .bersi {
-      border: 2px solid red;
       width: auto;
     }
+   
+  .ba {
+    padding: 15px 10px;
+    margin: 5px;
   }
+
+  .player {
+    width: 100%;
+  }
+
+  #progress {
+    width: 100%;
+  }
+  }
+
+@media (max-width: 360px) {
+  .bersi {
+    width: auto;
+  }
+
+  .aap {
+    width: auto;
+  }
+
+  .ba {
+    padding: 10px 5px;
+    margin: 3px;
+  }
+}
