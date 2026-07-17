@@ -373,44 +373,45 @@ i.up {
     0 0 15px rgba(232, 167, 159, 0.2);
 }
 .btn1:hover span {
-  color: #ffffff; /* Shifts to clean white on hover */
+  color: #ffffff; 
   text-shadow:
     0 0 10px #fce1dc,
     0 0 20px #e8a79f;
 }
 @media (max-width: 980px) {
   .ba {
-    flex-direction: column; /* Stacks the title and player vertically */
-    align-items: stretch; /* Allows elements to take up full width if needed */
+    flex-direction: column; 
+    align-items: stretch; 
     padding: 20px 15px;
-    margin: 10px; /* Adds some breathing room on the screen edges */
+    margin: 10px; 
     gap: 15px;
   }
 
   .b-div {
-    justify-content: center;
-    width: 100%; /* Centers the title/icon group on mobile */
+    margin: 0 auto;; 
   }
 
   .b-div.aap {
-    width: 100%; /* Ensures the player section takes up full width */
+   margin: 0 auto;
+    flex-grow: 1;
   }
 
   .player {
-    width: 100%;
-    justify-content: space-between; /* Spaces play button and progress bar nicely on mobile */
+   margin: 0 auto; 
   }
 
   #progress {
-    flex-grow: 1; /* Allows progress bar to stretch and fill the mobile screen */
-    width: auto; /* Overrides the fixed desktop width */
+    flex-grow: 1;
+    width: auto; 
   }
   body {
     background-size: cover;
     background-position: center;
-    background-attachment: scroll; /* better for mobile */
-    animation: none; /* optional */ /* 'scroll' or 'initial' prevents mobile browser lag/glitches */
-    background-attachment: scroll;
+    background-attachment: scroll; 
+    background: url(image.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    animation: zoom 10s infinite alternate;
 
   }
 }
