@@ -220,7 +220,7 @@ body {
 }
 
 .mmm {
-  background-color: #171315; /* Pure dark charcoal/rose undertone */
+  background-color: transparent; /* Pure dark charcoal/rose undertone */
   border: 2px solid #e8a79f; /* Brightened border base color */
   box-shadow:
     0 0 40px rgba(232, 167, 159, 0.7),
@@ -418,6 +418,7 @@ i.up {
   }
   .mmm {
     margin: 0 auto;
+    background-color: transparent;
   }
 }
 
@@ -438,6 +439,10 @@ i.up {
   #progress {
     width: 100%;
   }
+   .mmm {
+    margin: 0 auto;
+    background-color: transparent;
+  }
   }
 
 @media (max-width: 360px) {
@@ -452,5 +457,9 @@ i.up {
   .ba {
     padding: 10px 5px;
     margin: 3px;
+  }
+  .mmm {
+    margin: 0 auto;
+    background-color: transparent;
   }
 }
